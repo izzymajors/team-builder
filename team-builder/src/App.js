@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import React, {useState} from 'react';
-import {Form} from '../src/component/Form'
+import Form from './component/Form'
 
-
+const intialFormValues = {
+  name:"",
+   email:"",
+    role:"",
+}
 
 
 
@@ -43,7 +47,7 @@ setFormValues(intialFormValues);
       submit={submitForm}
       />
     </div>
-    
+
   );
 }
 
