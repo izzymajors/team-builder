@@ -11,12 +11,13 @@ const intialFormValues = {
 
 
 
-function App() {
+ function App() {
 const [teamMemberList, setTeamMemberList] = useState({})
 const [formValues, setFormValues] = useState(intialFormValues)
 
 const updateForm = (inputName, inputValue) => {
-  setFormValues({...formValues, [inputName]: inputValue});
+  setFormValues({...formValues, [inputName]: inputValue,
+  });
 }
 
 const submitForm =(evt) =>{

@@ -19,6 +19,10 @@ export default function Form(props){
     return (
         <form className='form container' onSubmit={onSubmit}>
             <div className='form-group inputs'>
+
+            <h2>Team Member</h2>
+
+
                 <label>name
                     <input 
                     type='text'
@@ -27,6 +31,8 @@ export default function Form(props){
                     values={values.name}
                     />
                    </label>
+
+                   
 
                    <label>email
                        <input
@@ -37,12 +43,27 @@ export default function Form(props){
                        placeholder='Type an Email'
                        />
                      </label>
+
+                     <label>role
+                         <select>
+                             name='role'
+                             value={values.role}
+                             onChange={onChange}
+
+                             <option value=''>---select role---</option>
+                             <option value=''>Team Lead</option>
+                             <option value=''>Building Crew</option>
+                             <option value=''>Design Crew</option>
+                         </select>
+                         </label>
         
-            <h2>Team Member</h2>
-        
-    
-    </div>
-</form>
+                    </div>
+                    <div className='submit'>
+                        <button>Submit</button>
+
+                    </div>
+                </form>
+               
     )
 }
 
